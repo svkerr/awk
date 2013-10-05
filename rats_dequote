@@ -1,0 +1,7 @@
+# Goal is to remove commas from within quoted field
+# and preserver commas elsewhere
+BEGIN {FS = "\""}
+{if ($2 ~ /.*,/ )
+  gsub(/,/$2, "")
+}
+{print $1 $2 $3}

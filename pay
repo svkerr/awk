@@ -1,0 +1,5 @@
+{pay = pay + $2 * $3}
+END {print NR, "employees"
+    printf("total pay is $%.2f \n", pay)
+    printf("average pay is $%.2f \n", pay/NR)
+    }

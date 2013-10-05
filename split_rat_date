@@ -1,0 +1,8 @@
+# script: split_rat_date
+# call file with nn/nn/nnnn and number of rat calls (two column file)
+# splits date to isolate month, and number of calls made
+BEGIN 	{FS = " "}
+	{split($1, date,"/")}
+	{print date[1],$2}
+# i now want to take the last line and feed it to another script to
+# aggregate calls by month

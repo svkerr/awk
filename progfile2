@@ -1,0 +1,2 @@
+NF != 3 {print $0, "Number of fields is not equal to 3"}
+$2 < 3.35 {print $0, "Rate is below minimum wage"}
