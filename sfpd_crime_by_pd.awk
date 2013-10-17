@@ -3,11 +3,11 @@
 # and day of week
 # input file: sfpd processed file
 BEGIN	{FS = ","
-         crime = "assault"
+         crime = "trespass"
          printf("\nCrime is: %s\n", crime)
          } 
 
-	{if ($1 ~ "assault")
+	{if ($1 ~ crime)
 		pd[$5] += 1 && dw[$2] += 1  # grab police district and day of week
 	}
 
