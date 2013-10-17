@@ -2,4 +2,4 @@
 # a particular number of fields in a .csv file
 
 BEGIN	{FS = ","}
-	NF != 12 {print $0}
+	NF == 12 {print $0}
