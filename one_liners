@@ -1,0 +1,9 @@
+# to globally remove say double quotes from a file:
+sed 's/\"//g'
+
+# extract from comma delimited file, fields 2,4,5,6,7
+# from infile and output data to outfile
+cut -d"," -f2,4-7  infile > outfile
+
+# awk script to change all text to lower case
+awk '{print tolower($0)}' input.txt > output.txt
