@@ -1,0 +1,15 @@
+
+1. remove commas between double quotes
+rm_commas_bt_quotes_ver2.awk
+
+2. remove quotes
+
+3. cut appropriate columns
+$2,$4,$5,$6,$7 
+Category,DayOfWeek,Date,Time,PdDistrict
+
+4. process via algorithm
+
+How to add year as a column:
+a. regex and isolate year and add as column
+b. add year as column some other way
