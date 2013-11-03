@@ -1,0 +1,25 @@
+General script to counter performerid's with greater than n-entries:
+select performerid, count(*) as cust_count
+from aerolink_tab
+group by performerid having count(*) > 200000;
+
+To create an Impala table:
+impala-shell -i localhost -f file_name_of_table_schema.sql
+
+To determine number of Aerolink log entries (using performerid):
+select count(performerid) as num_users from aerolink_tab;
+
+To determine number of unique "somethings" in a given column:
+select distinct performerid
+from aerolink_tab;
+
+select auditstr, performerid from aerolink_tab
+where auditstr = 'ZipAndDownload' 
+limit 50;
+
+The following script tells me that the aerolink_tab file is
+at least hosed with the auditstr field. This should group each
+Aerolink command and the number of times it is used:
+select auditstr, count(*) as comm_count
+from aerolink_tab
+group by auditstr;
