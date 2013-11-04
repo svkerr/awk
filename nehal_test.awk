@@ -1,3 +1,4 @@
+#nehal 11/4/2013
 # awk script to process file from Nehal 
 # data file: nehal_test.dat
 # NOTE: This is a work in progress to handle multiple fields
