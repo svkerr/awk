@@ -1,14 +1,14 @@
 # awk script to aggregate a particular crime
 # by police district
 # and day of week
-# input file: sfpd processed file
+# input file: sfpd currently unprocessed file
 BEGIN	{FS = ","
-         crime = "trespass"
+         crime = "TRESPASS"
          printf("\nCrime is: %s\n", crime)
          } 
 
-	{if ($1 ~ crime)
-		pd[$5] += 1 && dw[$2] += 1  # grab police district and day of week
+	{if ($2 ~ crime)
+		pd[$7] += 1 && dw[$4] += 1  # grab police district and day of week
 	}
 
 END { for(num in pd)
